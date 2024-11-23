@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notes App</string>
+    <string name="notes_icon">notes icon</string>
+    <string name="register">Register</string>
+</resources>
