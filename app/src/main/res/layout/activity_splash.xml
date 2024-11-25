@@ -5,18 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/splash_background"
     tools:context=".SplashActivity">
 
+
     <ImageView
-        android:id="@+id/splashImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/splash_background"
+        android:id="@+id/notesIcon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/notes_icon"
-        android:scaleType="fitCenter"
         android:src="@drawable/notesicon"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="46dp" />
+        app:layout_constraintBottom_toTopOf="@+id/quote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/quote"
@@ -25,29 +27,26 @@
         android:layout_height="25dp"
         android:layout_marginBottom="12dp"
         android:text='"Your thoughts, organized in the cloud"'
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/appname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.733"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </TextView>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/appname"
+        style="@style/TextAppearance.AppCompat.Large"
         android:layout_width="377dp"
         android:layout_height="97dp"
+        android:gravity="center_horizontal"
         android:text="NOTECLOUD"
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/splashImage"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center_horizontal"
-        style="@style/TextAppearance.AppCompat.Large"
-        >
-
-    </TextView>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

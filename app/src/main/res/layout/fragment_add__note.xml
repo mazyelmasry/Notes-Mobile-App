@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addNoteFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/add_note_background"
+    tools:context=".SplashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".NewNoteFragment"
+        android:padding="12dp">
+
+
+        <TextView
+            android:id="@+id/addNoteHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:text="Add Note"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/addNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter the title"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/addNoteHeading"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:background="@drawable/border" />
+
+        <EditText
+            android:id="@+id/addNoteDesc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter the description"
+            android:gravity="top"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/addNoteTitle"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/border" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/GoBackbtn"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/addNoteTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#ffde59"
+            app:icon="@drawable/back">
+        </com.google.android.material.button.MaterialButton>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

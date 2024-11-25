@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/register"
+    android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".LoginActivity"
     android:background="@drawable/background">
 
     <TextView
-        android:id="@+id/registertext"
+        android:id="@+id/Logintext"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -21,7 +21,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/register"
+        android:text="Login"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold">
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/username"
-        android:layout_below="@+id/registertext"
+        android:layout_below="@+id/Logintext"
         android:hint="Username"
         android:textStyle="bold"
         android:textColorHint="@color/white"
@@ -48,25 +48,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/email"
-        android:layout_below="@+id/username"
-        android:hint="Email"
-        android:textStyle="bold"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:layout_margin="10dp"
-        android:padding="20dp"
-        android:background="@drawable/rounded_corner"
-        android:drawableLeft="@drawable/mail"
-        android:drawablePadding="20dp"
-        >
-    </EditText>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/password"
-        android:layout_below="@+id/email"
+        android:layout_below="@+id/username"
         android:hint="Password"
         android:textStyle="bold"
         android:textColorHint="@color/white"
@@ -84,30 +67,47 @@
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/signupbtn"
+        android:id="@+id/loginbtn"
         android:textSize="18dp"
         android:layout_marginTop="15dp"
         android:layout_below="@id/password"
         android:layout_centerInParent="true"
         android:textColor="@color/white"
-        android:text="Sign up"
+        android:text="Login"
         android:textStyle="bold"
-        android:backgroundTint="#9ad0d3">
-
+        android:backgroundTint="#9ad0d3"
+        android:layout_margin="3dp"
+        >
     </com.google.android.material.button.MaterialButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgetpassword"
+        android:text="Forgot Password?"
+        android:layout_below="@id/loginbtn"
+        android:textColor="#b81f22"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_margin="3dp"
+        >
+    </TextView>
+
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/gotologinbtn"
+        android:id="@+id/gotoregisterbtn"
         android:textSize="18dp"
         android:layout_marginTop="15dp"
-        android:layout_below="@id/signupbtn"
+        android:layout_below="@id/forgetpassword"
         android:layout_centerInParent="true"
         android:textColor="@color/white"
-        android:text="Already have an account?\nClick here to login"
+        android:text="Don't have an account?\nCreate a new account"
         android:textStyle="bold"
         android:backgroundTint="#ffde59"
-        >
+        android:layout_margin="3dp">
 
     </com.google.android.material.button.MaterialButton>
 
